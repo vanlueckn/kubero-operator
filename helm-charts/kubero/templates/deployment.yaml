@@ -74,6 +74,18 @@ spec:
                   name: kubero-secrets
                   key: KUBERO_USERS
                   optional: true
+            - name: KUBERO_ADMIN_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: kubero-secrets
+                  key: KUBERO_ADMIN_USERNAME
+                  optional: true
+            - name: KUBERO_ADMIN_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: kubero-secrets
+                  key: KUBERO_ADMIN_PASSWORD
+                  optional: true
             - name: KUBERO_SESSION_KEY
               valueFrom:
                 secretKeyRef:
